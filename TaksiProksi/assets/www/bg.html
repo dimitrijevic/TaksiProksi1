@@ -1,0 +1,1747 @@
+﻿<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <title>TaksiProksi</title>
+    <meta content="IE=9" http-equiv="X-UA-Compatible" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        name="viewport" />
+    <link href="jquery.mobile.structure-1.1.0.min.css" rel="stylesheet" />
+    <link href="jquery.mobile-1.1.0.min.css" rel="stylesheet" />
+    <link href="theme.css" rel="stylesheet" />
+    <script src="jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
+    <script src="knockout-2.1.0.js" type="text/javascript"></script>
+    <script src="cordova-2.1.0.js" type="text/javascript"></script>
+    <script src="security.js" type="text/javascript"></script>
+    <!--<script src="http://jsconsole.com/remote.js?BA09DDCF-DF6A-4D09-B34A-14220ECE4890"></script>-->
+    <script type="text/javascript">
+        var logo = function (ctx) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(134.809, 0);
+            ctx.lineTo(134.809, 25.0803);
+            ctx.lineTo(0, 25.0803);
+            ctx.closePath();
+            ctx.clip();
+            ctx.strokeStyle = 'rgba(0,0,0,0)';
+            ctx.lineCap = 'butt';
+            ctx.lineJoin = 'miter';
+            ctx.miterLimit = 4;
+            ctx.save();
+            ctx.restore();
+            ctx.save();
+            ctx.translate(-85.7935, -83.8334);
+            ctx.save();
+            ctx.fillStyle = "#00a6d6";
+            ctx.strokeStyle = "rgba(0, 0, 0, 0)";
+            ctx.lineWidth = 1.0075600147247314;
+            ctx.transform(1, 0, -0.17232, 0.985041, 0, 0);
+            ctx.beginPath();
+            ctx.moveTo(162.66788, 85.1065);
+            ctx.lineTo(231.14442000000002, 85.1065);
+            ctx.quadraticCurveTo(236.03730000000002, 85.1065, 236.03730000000002, 89.99938);
+            ctx.lineTo(236.03730000000002, 105.67472);
+            ctx.quadraticCurveTo(236.03730000000002, 110.5676, 231.14442000000002, 110.5676);
+            ctx.lineTo(162.66788, 110.5676);
+            ctx.quadraticCurveTo(157.775, 110.5676, 157.775, 105.67472);
+            ctx.lineTo(157.775, 89.99938);
+            ctx.quadraticCurveTo(157.775, 85.1065, 162.66788, 85.1065);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.restore();
+            ctx.save();
+            ctx.fillStyle = "#ffffff";
+            ctx.strokeStyle = "rgba(0, 0, 0, 0)";
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(185.69, 86.6871);
+            ctx.lineTo(182.3838, 104.1471);
+            ctx.lineTo(185.9086, 104.1471);
+            ctx.lineTo(186.64635, 100.29441999999999);
+            ctx.lineTo(187.95790000000002, 99.01019);
+            ctx.lineTo(190.08916000000002, 104.1471);
+            ctx.lineTo(194.05114000000003, 104.1471);
+            ctx.lineTo(190.69029000000003, 97.09751);
+            ctx.lineTo(195.79987000000003, 92.12455);
+            ctx.lineTo(191.42804000000004, 92.12455);
+            ctx.lineTo(188.36776000000003, 95.78596);
+            ctx.bezierCurveTo(188.02339000000003, 96.204132, 187.64377000000005, 96.68479, 187.27480000000003, 97.15216000000001);
+            ctx.lineTo(187.22010000000003, 97.15216000000001);
+            ctx.lineTo(189.21475000000004, 86.68706);
+            ctx.lineTo(185.68995000000004, 86.68706);
+            ctx.closePath();
+            ctx.moveTo(210.88265000000004, 86.878328);
+            ctx.bezierCurveTo(209.80032000000003, 86.878328, 208.86067000000003, 87.694982, 208.86067000000003, 88.90029799999999);
+            ctx.bezierCurveTo(208.86067000000003, 89.93342799999999, 209.57083000000003, 90.621708, 210.55476000000002, 90.621708);
+            ctx.lineTo(210.60936, 90.621708);
+            ctx.bezierCurveTo(211.74088, 90.621708, 212.68598, 89.881575, 212.68598, 88.627058);
+            ctx.bezierCurveTo(212.68598, 87.569328, 211.94033, 86.87832800000001, 210.8826, 86.87832800000001);
+            ctx.closePath();
+            ctx.moveTo(153.475, 87.45213100000001);
+            ctx.bezierCurveTo(151.87610999999998, 87.45213100000001, 150.21282, 87.59140800000001, 149.13049, 87.86199);
+            ctx.lineTo(146.07021, 104.14709);
+            ctx.lineTo(149.54035, 104.14709);
+            ctx.lineTo(150.66063, 98.19046);
+            ctx.bezierCurveTo(151.02961, 98.21506000000001, 151.51844, 98.27243, 152.1088, 98.27243);
+            ctx.bezierCurveTo(154.12587, 98.27243, 156.08407, 97.772692, 157.43697, 96.71496);
+            ctx.bezierCurveTo(158.71609, 95.731026, 159.67754, 94.13615, 159.67754, 92.06989);
+            ctx.bezierCurveTo(159.67754, 90.471, 159.00567999999998, 89.30765, 157.87416, 88.5451);
+            ctx.bezierCurveTo(156.66884, 87.70875600000001, 154.97549999999998, 87.45214, 153.475, 87.45214);
+            ctx.closePath();
+            ctx.moveTo(153.58429999999998, 90.29383);
+            ctx.bezierCurveTo(154.9372, 90.29383, 156.0981, 90.796157, 156.0981, 92.37045);
+            ctx.bezierCurveTo(156.0981, 94.04314000000001, 154.68876999999998, 95.40341000000001, 152.57331, 95.40341000000001);
+            ctx.bezierCurveTo(151.95835, 95.40341000000001, 151.57609, 95.34058, 151.20711, 95.26679000000001);
+            ctx.lineTo(152.13613, 90.37580000000001);
+            ctx.bezierCurveTo(152.43131, 90.32660000000001, 152.92014, 90.29383000000001, 153.5843, 90.29383000000001);
+            ctx.closePath();
+            ctx.moveTo(176.23590000000001, 91.82397000000001);
+            ctx.bezierCurveTo(171.95579, 91.82397000000001, 169.0497, 95.26291000000002, 169.0497, 99.42003000000001);
+            ctx.bezierCurveTo(169.0497, 102.42103000000001, 171.10908, 104.42032, 174.15928, 104.42032);
+            ctx.bezierCurveTo(178.3164, 104.42032, 181.34548, 101.20004, 181.34548, 96.79693);
+            ctx.bezierCurveTo(181.34548, 94.04192, 179.45828, 91.82397, 176.23590000000001, 91.82397);
+            ctx.closePath();
+            ctx.moveTo(202.1937, 91.82397);
+            ctx.bezierCurveTo(199.0943, 91.82397, 196.89286, 93.46818, 196.89286, 95.97721);
+            ctx.bezierCurveTo(196.89286, 97.47771, 198.05648000000002, 98.48536, 199.43399000000002, 99.17411);
+            ctx.bezierCurveTo(200.54091000000002, 99.715274, 200.93681000000004, 100.141215, 200.93681000000004, 100.73157);
+            ctx.bezierCurveTo(200.93681000000004, 101.32193000000001, 200.41519000000002, 101.82453000000001, 199.40666000000004, 101.82453000000001);
+            ctx.bezierCurveTo(198.25054000000006, 101.82453000000001, 196.98049000000003, 101.32186000000001, 196.29173000000006, 100.97749);
+            ctx.lineTo(195.41737000000006, 103.46397);
+            ctx.bezierCurveTo(196.13072000000005, 103.98053, 197.55368000000007, 104.36838, 199.07878000000005, 104.39298000000001);
+            ctx.bezierCurveTo(202.27656000000005, 104.41758000000001, 204.62554000000006, 102.91278000000001, 204.62554000000006, 100.15777000000001);
+            ctx.bezierCurveTo(204.62554000000006, 98.48508000000001, 203.24878000000007, 97.54305000000001, 201.92047000000005, 96.87889000000001);
+            ctx.bezierCurveTo(200.96113000000005, 96.41152200000002, 200.47230000000005, 95.97733500000001, 200.47230000000005, 95.48537000000002);
+            ctx.bezierCurveTo(200.47230000000005, 94.82121500000002, 201.07044000000005, 94.44706000000002, 202.02976000000004, 94.44706000000002);
+            ctx.bezierCurveTo(203.06290000000004, 94.44706000000002, 203.94231000000005, 94.74483000000002, 204.43427000000003, 94.96621600000001);
+            ctx.lineTo(205.28132000000002, 92.45241600000001);
+            ctx.bezierCurveTo(204.69096000000002, 92.13263700000001, 203.59582000000003, 91.82396400000002, 202.19370000000003, 91.82396400000002);
+            ctx.closePath();
+            ctx.moveTo(168.28470000000004, 91.85128400000002);
+            ctx.bezierCurveTo(166.63661000000005, 91.85128400000002, 165.32028000000005, 92.98478400000002, 164.45934000000005, 94.58367400000001);
+            ctx.lineTo(164.37734000000006, 94.58367400000001);
+            ctx.bezierCurveTo(164.47574000000006, 93.74733100000001, 164.52214000000006, 92.93626400000002, 164.59593000000007, 92.12451400000002);
+            ctx.lineTo(161.53565000000006, 92.12451400000002);
+            ctx.bezierCurveTo(161.41265000000007, 93.15764400000002, 161.25157000000007, 95.16790400000002, 160.90720000000007, 96.98817400000001);
+            ctx.lineTo(159.56832000000008, 104.14704400000002);
+            ctx.lineTo(163.09311000000008, 104.14704400000002);
+            ctx.lineTo(163.94016000000008, 99.66591400000001);
+            ctx.bezierCurveTo(164.38293000000007, 97.30447400000001, 165.44782000000006, 95.29408400000001, 167.71086000000008, 95.29408400000001);
+            ctx.bezierCurveTo(167.90766000000008, 95.29408400000001, 168.08515000000008, 95.29678400000001, 168.25734000000008, 95.32140400000001);
+            ctx.lineTo(168.96776000000008, 91.87858400000002);
+            ctx.bezierCurveTo(168.74638000000007, 91.85398400000001, 168.50606000000008, 91.85126400000001, 168.2846700000001, 91.85126400000001);
+            ctx.closePath();
+            ctx.moveTo(208.3688700000001, 92.12450400000001);
+            ctx.lineTo(206.0736600000001, 104.14700400000001);
+            ctx.lineTo(209.6257700000001, 104.14700400000001);
+            ctx.lineTo(211.8936600000001, 92.124504);
+            ctx.lineTo(208.3688700000001, 92.124504);
+            ctx.closePath();
+            ctx.moveTo(175.7713700000001, 94.529014);
+            ctx.bezierCurveTo(177.1734700000001, 94.529014, 177.6567200000001, 95.717304, 177.6567200000001, 96.824224);
+            ctx.bezierCurveTo(177.6567200000001, 98.865884, 176.5724800000001, 101.715214, 174.6784100000001, 101.715214);
+            ctx.bezierCurveTo(173.4239000000001, 101.715214, 172.7110900000001, 100.794784, 172.7110900000001, 99.392674);
+            ctx.bezierCurveTo(172.7110900000001, 97.52320399999999, 173.7297100000001, 94.529004, 175.7713700000001, 94.529004);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.restore();
+            ctx.save();
+            ctx.fillStyle = "#58595b";
+            ctx.strokeStyle = "rgba(0, 0, 0, 0)";
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(111.915, 86.6871);
+            ctx.lineTo(108.6088, 104.1471);
+            ctx.lineTo(112.10627, 104.1471);
+            ctx.lineTo(112.84401, 100.29441999999999);
+            ctx.lineTo(114.18289, 99.01019);
+            ctx.lineTo(116.28683, 104.1471);
+            ctx.lineTo(120.24880999999999, 104.1471);
+            ctx.lineTo(116.91528, 97.09751);
+            ctx.lineTo(122.02485999999999, 92.12455);
+            ctx.lineTo(117.65302999999998, 92.12455);
+            ctx.lineTo(114.56541999999999, 95.78596);
+            ctx.bezierCurveTo(114.22104999999999, 96.204132, 113.86876, 96.68479, 113.49978999999999, 97.15216000000001);
+            ctx.lineTo(113.44519, 97.15216000000001);
+            ctx.lineTo(115.43984, 86.68706);
+            ctx.lineTo(111.91505000000001, 86.68706);
+            ctx.closePath();
+            ctx.moveTo(136.04215, 86.878328);
+            ctx.bezierCurveTo(134.95982999999998, 86.878328, 134.02017999999998, 87.694982, 134.02017999999998, 88.90029799999999);
+            ctx.bezierCurveTo(134.02017999999998, 89.93342799999999, 134.73032999999998, 90.621708, 135.71426999999997, 90.621708);
+            ctx.lineTo(135.76896999999997, 90.621708);
+            ctx.bezierCurveTo(136.90047999999996, 90.621708, 137.84558999999996, 89.881575, 137.84558999999996, 88.627058);
+            ctx.bezierCurveTo(137.84558999999996, 87.569328, 137.09992999999997, 86.87832800000001, 136.04219999999995, 86.87832800000001);
+            ctx.closePath();
+            ctx.moveTo(86.39459999999995, 87.58875100000001);
+            ctx.lineTo(85.79347299999995, 90.67636100000001);
+            ctx.lineTo(90.16530299999995, 90.67636100000001);
+            ctx.lineTo(87.59685299999995, 104.14706100000001);
+            ctx.lineTo(91.14896299999995, 104.14706100000001);
+            ctx.lineTo(93.71741299999995, 90.67636100000001);
+            ctx.lineTo(98.14389299999995, 90.67636100000001);
+            ctx.lineTo(98.71769599999994, 87.58875100000001);
+            ctx.lineTo(86.39459599999995, 87.58875100000001);
+            ctx.closePath();
+            ctx.moveTo(127.95429599999994, 91.82396100000001);
+            ctx.bezierCurveTo(124.85490599999994, 91.82396100000001, 122.68077599999994, 93.46817100000001, 122.68077599999994, 95.97720100000001);
+            ctx.bezierCurveTo(122.68077599999994, 97.47770100000001, 123.84438599999994, 98.48535100000001, 125.22190599999993, 99.17410100000001);
+            ctx.bezierCurveTo(126.32882599999993, 99.715265, 126.69739599999992, 100.14120600000001, 126.69739599999992, 100.73156100000001);
+            ctx.bezierCurveTo(126.69739599999992, 101.32192100000002, 126.20311599999992, 101.82452100000002, 125.19457599999992, 101.82452100000002);
+            ctx.bezierCurveTo(124.03845599999992, 101.82452100000002, 122.74107599999992, 101.32186100000001, 122.05232599999992, 100.97748100000001);
+            ctx.lineTo(121.20528599999991, 103.46396100000001);
+            ctx.bezierCurveTo(121.91863599999992, 103.98052100000001, 123.34159599999991, 104.36838100000001, 124.86669599999992, 104.39297100000001);
+            ctx.bezierCurveTo(128.06447599999993, 104.41757100000002, 130.3861359999999, 102.91277100000002, 130.3861359999999, 100.15776100000002);
+            ctx.bezierCurveTo(130.3861359999999, 98.48507100000002, 129.00937599999992, 97.54304100000001, 127.68105599999991, 96.87888100000002);
+            ctx.bezierCurveTo(126.72172599999992, 96.41151300000003, 126.23288599999991, 95.97732600000002, 126.23288599999991, 95.48536100000002);
+            ctx.bezierCurveTo(126.23288599999991, 94.82120600000003, 126.85834599999991, 94.44705100000003, 127.8176759999999, 94.44705100000003);
+            ctx.bezierCurveTo(128.8508159999999, 94.44705100000003, 129.7029059999999, 94.74482100000003, 130.1948659999999, 94.96620700000002);
+            ctx.lineTo(131.0692259999999, 92.45240700000002);
+            ctx.bezierCurveTo(130.4788659999999, 92.13262800000002, 129.3564059999999, 91.82395500000002, 127.9542959999999, 91.82395500000002);
+            ctx.closePath();
+            ctx.moveTo(103.8545959999999, 91.85127500000003);
+            ctx.bezierCurveTo(97.9509959999999, 91.85127500000003, 95.2475459999999, 96.18100500000003, 95.2475459999999, 100.23973500000002);
+            ctx.bezierCurveTo(95.2475459999999, 102.74876500000002, 96.7169659999999, 104.42029500000002, 98.8816359999999, 104.42029500000002);
+            ctx.bezierCurveTo(100.2837359999999, 104.42029500000002, 101.8459759999999, 103.76234500000002, 102.9529059999999, 101.76987500000003);
+            ctx.lineTo(103.00750599999989, 101.76987500000003);
+            ctx.bezierCurveTo(102.9583059999999, 102.63081500000002, 102.8681559999999, 103.43370500000003, 102.8435659999999, 104.14705500000002);
+            ctx.lineTo(106.09511599999989, 104.14705500000002);
+            ctx.bezierCurveTo(106.04591599999989, 102.64656500000002, 106.2917659999999, 100.28661500000002, 106.58694599999988, 98.73691500000002);
+            ctx.lineTo(107.84384599999988, 92.45240500000003);
+            ctx.bezierCurveTo(106.83531599999989, 92.13262600000003, 105.30584599999989, 91.85127700000002, 103.85454599999988, 91.85127700000002);
+            ctx.closePath();
+            ctx.moveTo(133.52834599999988, 92.12451700000002);
+            ctx.lineTo(131.2331359999999, 104.14701700000003);
+            ctx.lineTo(134.7852459999999, 104.14701700000003);
+            ctx.lineTo(137.05313599999988, 92.12451700000002);
+            ctx.lineTo(133.52834599999988, 92.12451700000002);
+            ctx.closePath();
+            ctx.moveTo(102.89814599999988, 94.52902700000003);
+            ctx.bezierCurveTo(103.26712599999987, 94.52902700000003, 103.58390599999988, 94.58912700000003, 103.85448599999988, 94.63832300000003);
+            ctx.lineTo(103.30800599999988, 97.42536300000003);
+            ctx.bezierCurveTo(102.74224599999988, 100.37716300000004, 101.44207599999987, 101.57860300000003, 100.38434599999988, 101.57860300000003);
+            ctx.bezierCurveTo(99.40041099999988, 101.57860300000003, 98.93617599999987, 100.76467300000003, 98.93617599999987, 99.58395300000003);
+            ctx.bezierCurveTo(98.93617599999987, 97.34550300000003, 100.61049599999987, 94.52902300000004, 102.89814599999987, 94.52902300000004);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.save();
+
+            ctx.restore();
+        }
+
+        var resize = function () {
+
+            var ctxs = document.getElementsByTagName('canvas');
+            for (var i = 0; i < ctxs.length; i++) {
+                if (ctxs[i].id != 'loader') {
+                    var ctx = ctxs[i].getContext('2d');
+
+                    if (ctx.canvas.parentNode.clientWidth / 134.809 < ctx.canvas.parentNode.clientHeight / 25.0803) {
+                        ctx.canvas.height = ctx.canvas.parentNode.clientHeight;
+                        ctx.canvas.width = ctx.canvas.parentNode.clientWidth;
+                        var scaleX = ctx.canvas.parentNode.clientWidth / 134.809;
+                        var scaleY = ctx.canvas.parentNode.clientHeight / 134.809;
+                        ctx.scale(scaleX, scaleX);
+                        ctx.translate((ctx.canvas.parentNode.clientWidth - 134.809 * scaleX) / (2 * scaleX), (ctx.canvas.parentNode.clientHeight - 25.0803 * scaleX) / (2 * scaleX));
+                        //alert('a' + (ctx.canvas.parentNode.clientWidth - 134.809) / 2);
+                        //alert('a' + ctx.canvas.parentNode.clientWidth);
+                        //alert('a' + ctx.canvas.width);
+
+                    } else {
+                        ctx.canvas.height = ctx.canvas.parentNode.clientHeight;
+                        ctx.canvas.width = ctx.canvas.parentNode.clientWidth;
+                        var scaleX = ctx.canvas.parentNode.clientWidth / 25.0803;
+                        var scaleY = ctx.canvas.parentNode.clientHeight / 25.0803;
+                        ctx.scale(scaleY, scaleY);
+                        ctx.translate((ctx.canvas.parentNode.clientWidth - 134.809 * scaleY) / (2 * scaleY), (ctx.canvas.parentNode.clientHeight - 25.0803 * scaleY) / (2 * scaleY));
+                        //alert('b canvas scaled size:' + 134.809 * ctx.canvas.parentNode.clientHeight / 25.0803);
+                        //alert('b div size:' + ctx.canvas.parentNode.clientWidth);
+                        //alert('b unscaled offset:' + (ctx.canvas.parentNode.clientWidth - 134.809 * ctx.canvas.parentNode.clientHeight / 25.0803) / 2);
+                    }
+
+                    logo(ctx);
+                }
+            }
+        }
+
+        window.onload = function () {
+            window.addEventListener('resize', resize, false);
+            window.addEventListener('orientationchange', resize, false);
+            resize();
+        }
+
+        $(document).bind('pagechange', function () {
+            resize();
+        });
+
+        var version = "1.1.0";
+        var hostName = "bg.taksiproksi.com";
+        var osOffset = 6; // 5 for Android, 11 for Windows Phone
+
+        var intervalID;
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            CV(false);
+            checkConnection();
+
+        }
+
+        // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+
+        $(document).bind('mobileinit', function () {
+            $.mobile.loader.prototype.options.text = "Molimo sačekajte...";
+            $.mobile.loader.prototype.options.textVisible = true;
+            $.mobile.loader.prototype.options.theme = "a";
+            $.mobile.loader.prototype.options.html = "";
+
+            $.mobile.defaultDialogTransition = 'none';
+            $.mobile.defaultPageTransition = 'none';
+            $.mobile.loadingMessage = "Molimo sačekajte...";
+            $.mobile.allowCrossDomainPages = true;
+
+            $.mobile.buttonMarkup.hoverDelay = 25;
+        });
+
+        function checkConnection() {
+            var networkState = navigator.network.connection.type;
+            if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) {
+                navigator.notification.confirm('Ukoliko internet pristup nije uključen izaberite povratak na izbor grada i podesite internet pristup. U suprotnom odaberite nastavak dalje.', alertConnection, 'Aplikacija ne prepoznaje pristup internetu.', 'Povratak|Nastavak');
+            }
+        }
+
+        function CV(warnUser) {
+
+            var url = 'http://' + hostName + '/customerservice.svc/json/cva';
+
+            var xmlHttp = new window.XMLHttpRequest();
+
+            if (xmlHttp == null) {
+
+                xmlHttp = new XMLHttpRequest();
+
+            }
+
+            xmlHttp.open("GET", url, true);
+
+            xmlHttp.send();
+
+            xmlHttp.onreadystatechange = function () {
+
+                if (xmlHttp.readyState == 4) {
+
+                    if (xmlHttp.status == 200 || xmlHttp.status == 0) {
+                        if (ko.utils.parseJson(xmlHttp.responseText).CheckVersionAndroidRESTResult == version) {
+                            if (warnUser == true) navigator.notification.alert('Koristite najnoviju stabilnu verziju aplikacije ' + version + '.', alertDismissed, 'Verzija aplikacije');
+                        } else
+                            navigator.notification.alert('TaksiProksi verzija koju koristite nije najnovija ili nije još stabilna. Molimo Vas da posetite TaksiProksi sajt radi preuzmanja trenutne stabilne verzije.', alertDismissed, 'Verzija aplikacije');
+                    } else {
+                        navigator.notification.alert('Trenutnu verziju najnovije TaksiProksi aplikacije nije moguće odrediti. Molimo probajte kasnije ili posetite stranu o mobilnim aplikacijama na TaksiProksi sajtu.', alertDismissed, 'Verzija aplikacije');
+                    }
+
+                }
+
+            }
+        }
+
+        function alertDismissed() {
+            // do something
+            // device.exitApp();
+        }
+
+        function alertConnection(buttonIndex) {
+            if (buttonIndex == 1) $.mobile.changePage("index.html");
+        }
+
+        var storage = window.localStorage;
+        var onLocError = function () { navigator.notification.alert('Podaci o lokaciji nisu dostupni.', alertDismissed, 'Aplikacija ne može odrediti lokaciju.'); }
+        var cog = new Image();
+
+        function init() {
+            cog.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABK1JREFUeNqMVt1ZGzkUvVfS4IW1l8GO82w6IBXE7mCpAFMB+Pt4Z6iApALcAe4AU0HoAJfg7BPYHinnXmmciX+y0YdmJHnQ0bk/R5cvh5cUyFPwRD4EChgEvGWMB36R3+JaiTkmD5gOs8yNb25uLlerFf1pM2yIGA82TEY7xow1oj4GBU6S6yywPNG4JwDH+XGv0Whs7ndN8n97mmPsLCSYgy7ImPQE/pFDyAF+7L0fgTNFUDBcLal90taD1doQ/T6NT9DnW8zkT+jJuQVYukG3hifCVk/L3JOxMBa8VVlSp9MhHKLaB+zpNo1fdgEpmByuMqUAV5viOQLwXNax9KBAFNEEpN1pUwnQmvl6aTza6zNjrCKaymeyOdYAMgfg18iG4T/qw+AC94zvpzDjcwqOXo3VGH26H0xMZ7jPxgT0R2zUi4BYt6bAfEbJvJFZKA4ODgZ5nhcJLE9mk35X21vWC/TXKmiwr2xszoQd/PQv3t/QCzY2twpqBpb5FKOp+hCgzWaTWq0W1Xx0ij5An9WC5VtiLMwvNBrVaSGMvQk5jHQVPN7sb0HzAtE+QJrNgrcUNEARieWCut0ugR0tl8sKcJ5Ahc3jRviPK8ZGTaaBwGKyT+gTiwM4a3Jrba6MbeVXo5F4kp9shn29ndUYC9vLirGDXzRhrYhD8DME5Hkg22df5rDYS/RXmVIsaP/Q/SXs600YnifTjbeSWliEdTYb3QyTqYfdDKTL4B1KS6tVqf6SgGq3P9BvZGpvNIrPCgVKZlGlCDQDxJiCjVppCab05DJHzb+b1Gm36X80cVjLuzozexs0f6IgRkA5XRhzIixRL1+IzhwdHVHrn1Y9oXe1i10aKT6bGGhg1CKK+cT0zCGCs0oXTIogybJMw/779//o48duMvnO9rzLn+Kz8wgS5Shqo4njpCoOQA5Ajb8adHh4SMvVghaLhYb/HsBip88krNVISSEigOlhjmi0LziNhr6wOsgO9C1339vbGznnNAU2AM9Svk235cqKieKGkldAf7DGvTrjnjJnzyQoMu0ZTuZgUqvmlYR+f39XIE4uqCX1E/rDZpCYmKwOOmivAfYK9KF1AM7EdG4uAMLAOjmQideQXOJQkyUisqYiFRhtSFbxCxj8do0T30dmTvLhC+an0MZZVBHX09tBTG4qFigZEJEChjTIEwtRik81Qa7uOQU0IrYAe7FRjqYw6SlYjgAyN1GmHsFIGPfVnxzFuFITKEkfYK+oWZ5qKlIkcZ7UE92oXBmeIgIxtAO5UtSHqo9uiLW+sme5ejSIRASeAFR4LYy8MMzL1aq3EYWzJF28BgMEzGYpBkrMKelgl+P6uTcVY8NjLYyYPwMTCcufSaouH6al9xNJcjC82vDb9uVZKbrWIumNO+waVsu1TCC+Wxcg6xaSpsZSYM2wLO9/U8qZWH+wztQnsfAxV/E3MIKZVf1FsmJVV8mamhEmxZ0X7sSsABsGv1tZJGejmptU7FBUDYzPAXQBwFEEl+9+stFEroJEci2ELwIMmZuWoSTE9DYYcWVCjlJrZWMpeBhlAEqBiulPE84S3ixU5gSTwGGOdyEVNJXxA8nPevshwABHktBS1YoQ+QAAAABJRU5ErkJggg=='; // Set source path 
+            intervalID = setInterval(draw, 10);
+        }
+
+        function deinit() {
+            clearInterval(intervalID);
+        }
+
+        var rotation = 0;
+
+        function draw() {
+            var ctx = document.getElementById('loader').getContext('2d');
+            ctx.globalCompositeOperation = 'destination-over';
+            ctx.save();
+            ctx.clearRect(0, 0, 27, 27);
+            ctx.translate(13.5, 13.5); // to get it in the origin 
+            rotation += 1;
+            ctx.rotate(rotation * Math.PI / 64); //rotate in origin 
+            ctx.translate(-13.5, -13.5); //put it back 
+            ctx.drawImage(cog, 0, 0);
+            ctx.restore();
+        }
+
+        function GetStatusReload(token, type, user, session) {
+
+            // Evaluation logic goes here, usually referencing other observables 
+
+            if (token != null) {
+
+                var xmlHttp = new window.XMLHttpRequest();
+
+                if (xmlHttp == null) {
+
+                    xmlHttp = new XMLHttpRequest();
+
+                }
+
+                var url = 'http://' + hostName + '/CustomerService.svc/json/cos/' + user + '/' + session + '/' + token + '/' + new Date().valueOf();
+
+                xmlHttp = new window.XMLHttpRequest();
+
+                if (xmlHttp == null) {
+
+                    xmlHttp = new XMLHttpRequest();
+
+                }
+
+                xmlHttp.open("GET", url, true);
+
+                xmlHttp.send();
+
+                xmlHttp.onreadystatechange = function (msg) {
+
+                    if (xmlHttp.readyState == 4) {
+
+                        if (xmlHttp.status == 200 || xmlHttp.status == 404 || xmlHttp.status == 0) {
+
+                            var result = ko.utils.parseJson(xmlHttp.responseText);
+
+                            if (parseInt(result.Status) < 5) setTimeout(function () { GetStatusReload(token, type, user, session) }, 5000);
+
+                            if (result.Status == '1') {
+
+                                $("#status").html("<canvas width='27' height='27' id='loader'></canvas><h1>Poziv je primljen...</h1>");
+                                ko.dataFor(document.getElementById("start"))["start"](result.StartAddress);
+                                init();
+
+                            } else if (result.Status == '2') {
+
+                                $("#status").html('<canvas width="27" height="27" id="loader"></canvas><h1>Poziv prosleđen dispečerima. Molimo sačekajte...</h1><br /><a id="dynBtn" data-theme="b" data-inline="true" data-bind="visible: ' + type + ' != null, click: cancelOrder.bind($data, \'' + token + '\', \'' + user + '\', \'' + session + '\')" data-role="button" data-icon="delete" data-iconpos="left" href="#">Otkaži poziv</a>');
+                                ko.dataFor(document.getElementById("start"))["start"](result.StartAddress);
+                                init();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else if (result.Status == '3') {
+
+                                $("#status").html('<canvas width="27" height="27" id="loader"></canvas><h1>Poziv obrađuje dispečer. Molimo sačekajte...</h1><br /><a id="dynBtn" data-theme="b" data-inline="true" data-bind="visible: ' + type + ' != null, click: cancelOrder.bind($data, \'' + token + '\', \'' + user + '\', \'' + session + '\')" data-role="button" data-icon="delete" data-iconpos="left" href="#">Otkaži poziv</a>');
+                                ko.dataFor(document.getElementById("start"))["start"](result.StartAddress);
+                                init();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else if (result.Status == '4') {
+
+                                $("#status").html('<canvas width="27" height="27" id="loader"></canvas><h1>Poziv obradio dispečer. Molimo sačekajte...</h1><br /><a id="dynBtn" data-theme="b" data-inline="true" data-bind="visible: ' + type + ' != null, click: cancelOrder.bind($data, \'' + token + '\', \'' + user + '\', \'' + session + '\')" data-role="button" data-icon="delete" data-iconpos="left" href="#">Otkaži poziv</a>');
+                                ko.dataFor(document.getElementById("start"))["start"](result.StartAddress);
+                                init();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else if (result.Status == '5') {
+
+                                $("#status").html("<h1>Poziv uspešno obrađen!<br>Vozilo broj " + result.TaxiNumber + " (" + result.CompanyName + ") stiže za " + result.TimeTillArival + " minuta.</h1><br /><a id='dynBtn' data-theme='b' data-inline='true' data-role='button' data-icon='back' data-iconpos='left' href='#step1'>Pozovi ponovo</a>");
+                                ko.dataFor(document.getElementById("order"))["order"]("");
+                                ko.dataFor(document.getElementById("start"))["start"]("");
+                                window.localStorage.setItem("order", "");
+                                deinit();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else if (result.Status == '6') {
+
+                                $("#status").html("<h1>Poziv otkazan od strane korisnika!</h1><br /><a id='dynBtn' data-theme='b' data-inline='true' data-role='button' data-icon='back' data-iconpos='left' href='#step1'>Pozovi ponovo</a>");
+                                ko.dataFor(document.getElementById("order"))["order"]("");
+                                ko.dataFor(document.getElementById("start"))["start"]("");
+                                window.localStorage.setItem("order", "");
+                                deinit();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else if (result.Status == '7') {
+
+                                $("#status").html("<h1>Poziv je istekao!</h1><br /><a id='dynBtn' data-theme='b' data-inline='true' data-role='button' data-icon='back' data-iconpos='left' href='#step1'>Pozovi ponovo</a>");
+                                ko.dataFor(document.getElementById("order"))["order"]("");
+                                ko.dataFor(document.getElementById("start"))["start"]("");
+                                window.localStorage.setItem("order", "");
+                                deinit();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else if (result.Status == '8') {
+
+                                $("#status").html("<h1>Poziv otkazan zbog statusa korisnika!</h1><br /><a id='dynBtn' data-theme='b' data-inline='true' data-role='button' data-icon='back' data-iconpos='left' href='#step1'>Pozovi ponovo</a>");
+                                ko.dataFor(document.getElementById("order"))["order"]("");
+                                ko.dataFor(document.getElementById("start"))["start"]("");
+                                window.localStorage.setItem("order", "");
+                                deinit();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else if (result.Status == '9') {
+
+                                $("#status").html("<h1>Poziv izazvao ler!</h1><br /><a id='dynBtn' data-theme='b' data-inline='true' data-role='button' data-icon='back' data-iconpos='left' href='#step1'>Pozovi ponovo</a>");
+                                ko.dataFor(document.getElementById("order"))["order"]("");
+                                ko.dataFor(document.getElementById("start"))["start"]("");
+                                window.localStorage.setItem("order", "");
+                                deinit();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else if (result.Status == '10') {
+
+                                $("#status").html("<h1>Nema slobodnih vozila!</h1><br /><a id='dynBtn' data-theme='b' data-inline='true' data-role='button' data-icon='back' data-iconpos='left' href='#step1'>Pozovi ponovo</a>");
+                                ko.dataFor(document.getElementById("order"))["order"]("");
+                                ko.dataFor(document.getElementById("start"))["start"]("");
+                                window.localStorage.setItem("order", "");
+                                deinit();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else if (result.Status == '11') {
+
+                                $("#status").html("<h1>" + result.StatusMessage + "</h1><br /><a id='dynBtn' data-theme='b' data-inline='true' data-role='button' data-icon='back' data-iconpos='left' href='#step1'>Pozovi ponovo</a>");
+                                ko.dataFor(document.getElementById("order"))["order"]("");
+                                ko.dataFor(document.getElementById("start"))["start"]("");
+                                window.localStorage.setItem("order", "");
+                                deinit();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else if (result.Status == '12') {
+
+                                $("#status").html("<h1> Poziv bez odgovora " + result.StatusMessage + "</h1><br /><a id='dynBtn' data-theme='b' data-inline='true' data-role='button' data-icon='back' data-iconpos='left' href='#step1'>Pozovi ponovo</a>");
+                                ko.dataFor(document.getElementById("order"))["order"]("");
+                                ko.dataFor(document.getElementById("start"))["start"]("");
+                                window.localStorage.setItem("order", "");
+                                deinit();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            } else {
+
+                                $("#status").html("<h1>Nije pronađeno slobodno vozilo! Molimo pokušajte opet.</h1><br /><a id='dynBtn' data-theme='b' data-inline='true' data-role='button' data-icon='back' data-iconpos='left' href='#step1'>Pozovi ponovo</a>");
+                                ko.dataFor(document.getElementById("order"))["order"]("");
+                                ko.dataFor(document.getElementById("start"))["start"]("");
+                                window.localStorage.setItem("order", "");
+                                deinit();
+
+                                try {
+                                    $("#dynBtn").button('refresh');
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                } catch (e) {
+                                    $("#dynBtn").button();
+                                    ko.applyBindings(vm, $("#dynBtn")[0]);
+                                }
+
+                            }
+
+                        } else {
+
+                            $("#status").html("<canvas width='27' height='27' id='loader'></canvas><h1>Provera ranijeg poziva u toku...</h1><br /><a id='dynBtn' data-theme='b' data-inline='true' data-role='button' data-icon='back' data-iconpos='left' href='#step1'>Pozovi ponovo</a>");
+                            ko.dataFor(document.getElementById("order"))["order"]("");
+                            ko.dataFor(document.getElementById("start"))["start"]("");
+                            window.localStorage.setItem("order", "");
+                            deinit();
+
+                            try {
+                                $("#dynBtn").button('refresh');
+                                ko.applyBindings(vm, $("#dynBtn")[0]);
+                            } catch (e) {
+                                $("#dynBtn").button();
+                                ko.applyBindings(vm, $("#dynBtn")[0]);
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            } else {
+
+                setTimeout(function () { GetStatusReload(token, type, user, session) }, 5000);
+
+                ko.dataFor(document.getElementById("order"))["order"]("");
+
+                window.localStorage.setItem("order", "");
+
+            }
+
+        };
+
+        $(document).ready(function () {
+
+            if (typeof Cordova == 'undefined' || window.device == undefined) {
+                navigator.notification = {};
+                navigator.notification.alert = function (msg) {
+                    alert(msg);
+                };
+            }
+
+            //document.addEventListener("pause", saveSetup, false);
+
+            ko.observableArray.fn.find = function (prop, data) {
+
+                var valueToMatch = data[prop];
+
+                return ko.utils.array(this(), function (item) {
+
+                    return item[prop] === valueToMatch;
+
+                });
+
+            };
+
+            function company(name, value) {
+
+                this.companyName = name;
+
+                this.companyValue = value;
+
+            }
+
+            var TPViewModel = function () {
+
+                // Data
+
+                var self = this;
+
+                self.order = ko.observable();
+
+                self.session = ko.observable();
+
+                self.availableCompanies = ko.observableArray();
+
+                self.chosenCompanies = ko.observableArray();
+
+                self.start = ko.observable("");
+
+                self.finish = ko.observable("");
+
+                self.specreq = ko.observable("");
+
+                self.choices = ko.observableArray();
+
+                self.choicelist = ko.observable("2/");
+
+                self.email = ko.observable("1");
+
+                self.username = ko.observable("");
+
+                self.password = ko.observable("");
+
+                self.address1 = ko.observable();
+
+                self.address2 = ko.observable();
+
+                self.checkbox = ko.observable(true);
+
+                self.loadApp = function () {
+
+                    if (window.localStorage != null) {
+
+                        //if (window.localStorage.getItem("first") == null) {
+                        //    window.localStorage.setItem("first", "no");
+                        //    $.mobile.changePage('#intro', { role: 'dialog' });
+                        //}
+
+                        this.address1(window.localStorage.getItem("address1"));
+
+                        this.address2(window.localStorage.getItem("address2"));
+
+                        //navigator.notification.alert("existing order: " + window.localStorage.getItem("order"));
+
+                        this.checkbox(window.localStorage.getItem("checkbox") == "true" ? true : false);
+
+                        if (this.checkbox()) {
+
+                            this.email(window.localStorage.getItem("email"));
+
+                            this.username(window.localStorage.getItem("username") == null ? "" : window.localStorage.getItem("username"));
+
+                            this.password(window.localStorage.getItem("password") == null ? "" : window.localStorage.getItem("password"));
+
+                            if (window.localStorage.getItem("order") != null) {
+
+                                if (window.localStorage.getItem("order") != "") {
+
+                                    this["order"]($("#order").val(window.localStorage.getItem("order")));
+
+                                    $.mobile.changePage("#step3");
+
+
+                                    var xmlHttp = new window.XMLHttpRequest();
+
+                                    if (xmlHttp == null) {
+
+                                        xmlHttp = new XMLHttpRequest();
+
+                                    }
+
+                                    var url = 'http://' + hostName + '/customerservice.svc/json/liec';
+
+                                    if (this.email() == 0) {
+
+                                        var data = '{"email": "' + this.username() +
+
+                                '","password": "' + Security.SHA1(this.password()) + '"}';
+
+                                    } else {
+
+                                        var data = '{"mobilenumber": "' + this.username() +
+
+                                '","password": "' + Security.SHA1(this.password()) + '"}';
+
+                                    }
+
+                                    xmlHttp.open("POST", url, true);
+
+                                    xmlHttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+
+                                    xmlHttp.send(data);
+
+                                    xmlHttp.onreadystatechange = function (msg) {
+
+                                        if (xmlHttp.readyState == 4) {
+
+                                            if (xmlHttp.status == 200 || xmlHttp.status == 404 || xmlHttp.status == 0) {
+
+                                                //On Successfull service call start
+
+                                                //self.session(ko.utils.parseJson(xmlHttp.responseText));
+
+                                                GetStatusReload($("#order").val(), null, self.username(), ko.utils.parseJson(xmlHttp.responseText));
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                            }
+
+
+                        }
+
+                    }
+
+                }
+
+                self.saveSetup = function () {
+
+                    $.mobile.showPageLoadingMsg();
+                    window.localStorage.setItem("address1", this.address1() == null ? "" : this.address1());
+                    window.localStorage.setItem("address2", this.address2() == null ? "" : this.address2());
+                    $.mobile.changePage("#step1");
+                    $.mobile.hidePageLoadingMsg();
+
+                }
+
+                self.saveSetup2 = function () {
+
+                    $.mobile.showPageLoadingMsg();
+
+                    window.localStorage.setItem("checkbox", this.checkbox());
+
+                    $.mobile.changePage("#step2");
+
+                    $.mobile.hidePageLoadingMsg();
+
+                }
+
+                self.loadSetup = function () {
+
+                    this.address1(window.localStorage.getItem("address1"));
+
+                    this.address2(window.localStorage.getItem("address2"));
+
+                }
+
+                self.loadData = function (dest, src) {
+
+                    this[dest](this[src]());
+
+                }
+
+                self.cancelOrder = function (token, user, session) {
+
+                    var url = "http://" + hostName + "/customerservice.svc/json/cancel"
+
+                    var data = '{"orderToken":"' + token + '", "username":"' + user + '", "sessionToken":"' + session + '"}';
+
+                    var xmlHttp = new window.XMLHttpRequest();
+
+                    if (xmlHttp == null) {
+
+                        xmlHttp = new XMLHttpRequest();
+
+                    }
+
+                    xmlHttp.open("POST", url, true);
+
+                    xmlHttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+
+                    xmlHttp.send(data);
+
+                    xmlHttp.onreadystatechange = function (msg) {
+
+                        if (xmlHttp.readyState == 4) {
+
+                            if (xmlHttp.status == 200 || xmlHttp.status == 404 || xmlHttp.status == 0) {
+
+                                //On Successfull service call start
+
+                                var result = ko.utils.parseJson(xmlHttp.responseText);
+
+                                if (result == 'ERR_NOT_LOGGED_IN') {
+
+                                    navigator.notification.alert('Nemate prava do otkažete poziv. Proverite Vaše korisničko ime i lozinku. Hvala.', alertDismissed, 'Upozorenje');
+
+                                } else if (result == 'ERR_CANCEL_NOT_ALLOWED') {
+
+                                    navigator.notification.alert('Poziv koji ste pokušali da otkažete je već ranije otkazan.', alertDismissed, 'Upozorenje');
+
+                                } else if (result == 'ERR_ORDER_DOESNT_EXIST') {
+
+                                    navigator.notification.alert('Poziv koji ste pokušali da otkažete je već istekao.', alertDismissed, 'Upozorenje');
+
+                                } else if (result == 'ERR_INVALID_SESSION') {
+
+                                    navigator.notification.alert('Nepoznata sesija! Molimo probajte ponovo.', alertDismissed, 'Upozorenje');
+
+                                } else if (result.CancelOrderRESTResult == '') {
+                                    /*
+                                    $.mobile.showPageLoadingMsg();
+
+                                    self.order(result.CancelOrderRESTResult);
+
+                                    window.localStorage.setItem("order", self.order());
+
+                                    window.localStorage.setItem("checkbox", self.checkbox());
+
+                                    if (self.checkbox() != null && self.checkbox()) {
+
+                                    window.localStorage.setItem("email", self.email());
+
+                                    window.localStorage.setItem("username", self.username());
+
+                                    window.localStorage.setItem("password", self.password());
+
+                                    }
+
+                                    $.mobile.changePage("#step3");
+
+                                    $.mobile.hidePageLoadingMsg();
+                                    */
+                                    GetStatusReload(order, type, user, pass);
+
+                                }
+
+                            } else {
+
+                                navigator.notification.alert('TaksiProksi otkazivanje neuspešno! Proverite konekciju i probajte ponovo. Hvala.', alertDismissed, 'Upozorenje');
+
+                            }
+
+                        }
+
+                    }
+
+
+                }
+
+
+                self.locBing = function (dest) {
+
+                    navigator.geolocation.getCurrentPosition(
+
+                        function (position) {
+
+                            var xmlHttp = new window.XMLHttpRequest();
+
+                            if (xmlHttp == null) {
+
+                                xmlHttp = new XMLHttpRequest();
+
+                            }
+
+
+                            var data = 'Aon0l3G-4nrDTq9V7SVjQwnv3O_FKZn-32Y7O4Aj36UL6uYcOfJDuAfC5C2XZWGs';
+
+                            var url = 'http://dev.virtualearth.net/REST/v1/Locations/' + position.coords.latitude + ',' + position.coords.longitude + '?key=' + data;
+
+                            jQuery.getJSON(url + "&c=sr&output=json&jsonp=?",
+
+                                    function (data) {
+
+                                        self[dest](data.resourceSets[0].resources[0].address.formattedAddress);
+
+                                    });
+
+                        }, onLocError);
+
+                }
+
+                // Behaviours    
+                self.checkVersion = function () {
+                    CV(true);
+                }
+
+                self.step2 = function () {
+
+                    window.localStorage.setItem("order", "");
+
+                    if (self.start() != "" && self.chosenCompanies().length > 0) {
+
+                        $.mobile.showPageLoadingMsg();
+
+                        $.mobile.changePage("#step2");
+
+                        $.mobile.hidePageLoadingMsg();
+
+                    } else {
+                        navigator.notification.alert('Morate popuniti sva obavezna polja!', alertDismissed, 'Upozorenje');
+                    }
+
+                };
+
+                self.step3 = function () {
+
+                    if (self.username() != "" && self.password() != "" || self.order != "") {
+
+                        var xmlHttp = new window.XMLHttpRequest();
+
+                        if (xmlHttp == null) {
+
+                            xmlHttp = new XMLHttpRequest();
+
+                        }
+
+                        var url = 'http://' + hostName + '/customerservice.svc/json/liec';
+
+                        if (this.email() == 0) {
+
+                            var data = '{"email": "' + this.username() +
+
+                                '","password": "' + Security.SHA1(this.password()) + '"}';
+
+                        } else {
+
+                            var data = '{"mobilenumber": "' + this.username() +
+
+                                '","password": "' + Security.SHA1(this.password()) + '"}';
+
+                        }
+
+                        xmlHttp.open("POST", url, true);
+
+                        xmlHttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+
+                        xmlHttp.send(data);
+
+                        xmlHttp.onreadystatechange = function (msg) {
+
+                            if (xmlHttp.readyState == 4) {
+
+                                if (xmlHttp.status == 200 || xmlHttp.status == 404 || xmlHttp.status == 0) {
+
+                                    if (xmlHttp.status == 404) {
+
+                                        //On Error result
+                                        var result = ko.utils.parseJson(xmlHttp.responseText);
+
+                                        if (result == 'ERR_UNREGISTERED') {
+
+                                            navigator.notification.alert('Neophodno je uneti registrovanu email adresu ili broj mobilnog.', alertDismissed, 'Upozorenje');
+
+                                        } else if (result == 'ERR_BLACKLISTED') {
+
+                                            navigator.notification.alert('Vaša email adresa ili mobilni je na listi zabranjenih korisnika.', alertDismissed, 'Upozorenje');
+
+                                        } else if (result == 'ERR_WRONG_PASSWORD') {
+
+                                            navigator.notification.alert('Neophodno je uneti ispravnu lozinku.', alertDismissed, 'Upozorenje');
+
+                                        } else if (result == 'ERR_ORDER_FREQUENCY') {
+
+                                            navigator.notification.alert('Moguće je naručiti jednom u 2 minuta.', alertDismissed, 'Upozorenje');
+
+                                        } else if (result == 'ERR_UNKNOWN') {
+
+                                            navigator.notification.alert('Nepoznata greška! Molimo probajte ponovo.', alertDismissed, 'Upozorenje');
+
+                                        }
+
+                                    } else {
+
+                                        //On Successfull service call start
+
+                                        self.session(ko.utils.parseJson(xmlHttp.responseText));
+
+                                        var type = Number(self.email()) + osOffset;
+
+                                        var data = '{"username": "' + self.username() +
+
+                                            '","sessionToken": "' + self.session() +
+
+                                            '","orderType": "' + type +
+
+                                            '","start": "' + self.start() +
+
+                                            '","finish": "' + self.finish() +
+
+                                            '","specreq": "' + self.specreq() +
+
+                                            '","choicelist": "' + self.choicelist() + self.chosenCompanies() + '"}';
+
+                                        var url = 'http://' + hostName + '/customerservice.svc/json/co';
+
+                                        xmlHttp.open("POST", url, true);
+
+                                        xmlHttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+
+                                        xmlHttp.send(data);
+
+                                        xmlHttp.onreadystatechange = function (msg) {
+
+                                            if (xmlHttp.readyState == 4) {
+
+                                                if (xmlHttp.status == 200 || xmlHttp.status == 404 || xmlHttp.status == 0) {
+
+                                                    //On Successfull service call start
+
+                                                    var result = ko.utils.parseJson(xmlHttp.responseText);
+
+                                                    if (result == 'ERR_UNREGISTERED') {
+
+                                                        navigator.notification.alert('Neophodno je uneti registrovanu email adresu ili broj mobilnog.', alertDismissed, 'Upozorenje');
+
+                                                    } else if (result == 'ERR_BLACKLISTED') {
+
+                                                        navigator.notification.alert('Vaša email adresa ili mobilni je na listi zabranjenih korisnika.', alertDismissed, 'Upozorenje');
+
+                                                    } else if (result == 'ERR_WRONG_PASSWORD') {
+
+                                                        navigator.notification.alert('Neophodno je uneti ispravnu lozinku.', alertDismissed, 'Upozorenje');
+
+                                                    } else if (result == 'ERR_ORDER_FREQUENCY') {
+
+                                                        navigator.notification.alert('Moguće je naručiti jednom u 2 minuta.', alertDismissed, 'Upozorenje');
+
+                                                    } else if (result == 'ERR_UNKNOWN') {
+
+                                                        navigator.notification.alert('Nepoznata greška! Molimo probajte ponovo.', alertDismissed, 'Upozorenje');
+
+                                                    } else {
+
+                                                        $.mobile.showPageLoadingMsg();
+
+                                                        self.order(result); //.CreateOrderRESTResult);
+
+                                                        window.localStorage.setItem("order", self.order());
+
+                                                        window.localStorage.setItem("checkbox", self.checkbox());
+
+                                                        if (self.checkbox() != null && self.checkbox()) {
+
+                                                            window.localStorage.setItem("email", self.email());
+
+                                                            window.localStorage.setItem("username", self.username());
+
+                                                            window.localStorage.setItem("password", self.password());
+
+                                                        }
+
+                                                        $.mobile.changePage("#step3");
+
+                                                        $.mobile.hidePageLoadingMsg();
+
+                                                        GetStatusReload(self.order(), type, self.username(), self.session());
+
+                                                    }
+
+                                                } else {
+
+                                                    navigator.notification.alert('TaksiProksi poziv neuspešan! Proverite podatke i probajte ponovo. Hvala.', alertDismissed, 'Upozorenje');
+
+                                                }
+
+                                            }
+
+                                        }
+
+                                    }
+
+                                } else {
+
+                                    navigator.notification.alert('TaksiProksi poziv neuspešan! Proverite podatke i probajte ponovo. Hvala.', alertDismissed, 'Upozorenje');
+
+                                }
+
+                            }
+
+                        }
+
+                    } else {
+
+                        navigator.notification.alert('Morate popuniti sva obavezna polja!', alertDismissed, 'Upozorenje');
+
+                    }
+
+                };
+
+                var url = 'http://' + hostName + '/customerservice.svc/json/gtc/' + new Date().valueOf();
+
+                var xmlHttp = new window.XMLHttpRequest();
+
+                if (xmlHttp == null) {
+
+                    xmlHttp = new XMLHttpRequest();
+
+                }
+
+                xmlHttp.open("GET", url, true);
+
+                xmlHttp.send();
+
+                xmlHttp.onreadystatechange = function () {
+
+                    if (xmlHttp.readyState == 4) {
+
+                        if (xmlHttp.status == 200 || xmlHttp.status == 404 || xmlHttp.status == 0) {
+
+                            var mappedData = ko.utils.arrayMap(ko.utils.parseJson(xmlHttp.responseText).GetTaxiCompaniesTimestampRESTResult, function (item) {
+
+                                self.chosenCompanies.push(item.ID);
+                                return new company(item.ShortName, item.ID);
+
+                            });
+
+                            self.availableCompanies(mappedData);
+
+                            $('#companies').selectmenu();
+
+                            $('#companies option').prop('selected', true);
+
+                            $('#companies').selectmenu('refresh');
+
+                            //navigator.notification.alert(self.availableCompanies().length);
+
+                            if (self.availableCompanies().length == 0) {
+
+                                navigator.notification.alert('TaksiProksi službe trenutno nisu dostupne! Molimo Vas učitajte formu ponovo. Hvala.', alertDismissed, 'Greška');
+                                device.exitApp();
+
+                            }
+
+                        } else {
+
+                            navigator.notification.alert('TaksiProksi službe nažalost nisu učitane! Poziv nije vratio ispravan odgovor. Molimo Vas učitajte formu ponovo. Hvala.', alertDismissed, 'Greška');
+                            device.exitApp();
+
+                        }
+
+                    }
+
+                }
+
+                //navigator.notification.alert('about to load!');
+                self.loadApp();
+                //navigator.notification.alert('load done');
+
+            };
+
+
+            window.vm = new TPViewModel();
+            ko.applyBindings(vm);
+            window.vm.loadApp();
+
+        });
+
+    </script>
+    <style type="text/css">
+        .label
+        {
+            font-weight: bold;
+        }
+        .portrait label.error, .landscape label.error
+        {
+            color: red;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.4;
+            margin-top: 0.5em;
+            width: 100%;
+            float: none;
+        }
+        .landscape label.error
+        {
+            display: inline-block;
+            margin-left: 22%;
+        }
+        .portrait label.error
+        {
+            margin-left: 0;
+            display: block;
+        }
+        em
+        {
+            color: red;
+            font-weight: bold;
+            padding-right: .25em;
+        }
+        .ui-header .ui-block-a .ui-btn
+        {
+            position: relative !important;
+            top: 2px !important;
+            left: 2px !important;
+        }
+        .ui-header .ui-block-d .ui-btn
+        {
+            position: relative !important;
+            top: 2px !important;
+            left: -2px !important;
+        }
+        .ui-header .ui-btn
+        {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Step 1 -->
+    <div id="step1" data-role="page">
+        <div class="ui-grid-b" data-position="fixed" data-role="header" data-theme="b" style="background-color: #FFFFFF;
+            background-image: none; height: 42px">
+            <div class="ui-block-a" style="background-color: #FFFFFF; text-align: left; vertical-align: text-top;
+                height: 42px">
+                <a data-icon="info" data-iconpos="notext" data-rel="dialog" data-role="button" href="#about"
+                    style="color: #FFFFFF; float: left;"></a>
+            </div>
+            <div class="ui-block-b" style="background-color: #FFFFFF; color: #007DDD; font-family: Segoe UI, Verdana, Tahoma, Arial, sans-serif;
+                text-align: center; font-size: 24px; height: 42px; display: block;">
+                <canvas id="c1">TaksiProksi</canvas>
+            </div>
+            <div class="ui-block-c" style="background-color: #FFFFFF; text-align: right; vertical-align: text-top;
+                height: 42px">
+                <a data-icon="gear" data-iconpos="notext" data-role="button" href="#setup"></a>
+            </div>
+        </div>
+        <div data-role="content">
+            <div>
+                <div data-role="controlgroup" data-type="horizontal" style="text-align: center">
+                    <a data-bind="click: step2" data-icon="arrow-r" data-iconpos="right" data-role="button"
+                        data-theme="b" href="#">Pozovi</a>
+                </div>
+                <label for="start">
+                    <b>Adresa polazišta:</b><em data-bind="visible: start() == ''"><super>* 
+			obavezno</super></em></label>
+                <div>
+                    <input id="start" class="required" data-bind="value: start" placeholder="proizvoljna (npr. Cara Lazara 3...)"
+                        type="text" />
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a data-bind="click: loadData.bind($data, 'start', 'address1')" data-icon="home"
+                            data-role="button" href="#">kućna</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a data-bind="click: loadData.bind($data, 'start', 'address2')" data-icon="star"
+                            data-role="button" href="#">omiljena</a>
+                    </div>
+                </div>
+                <!--<br />
+		        <label for="finish">
+                    <b>Adresa odredišta:</b><em data-bind="visible: finish() == ''"><super>* obavezno</super></em></label>
+                <div>
+                    <input data-bind="value: finish" type="text" id="finish" placeholder="proizvoljna (npr. Cara Dušana 5...)"
+                        class="required"></input>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a href="#" data-role="button" data-icon="home" data-bind="click: loadData.bind($data, 'finish', 'address1')">
+                            kućna</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#" data-role="button" data-icon="star" data-bind="click: loadData.bind($data, 'finish', 'address2')">
+                            omiljena</a>
+                    </div>
+                </div>-->
+                <br />
+                <label for="companies">
+                    <b>Taksi službe:</b><em data-bind="visible: chosenCompanies().length == 0"><super>* 
+			obavezno</super></em>
+                </label>
+                <select id="companies" data-bind="options: availableCompanies,
+
+                            optionsText: 'companyName',
+
+                            optionsValue: 'companyValue',
+
+                            selectedOptions: chosenCompanies" data-native-menu="false" data-role="select"
+                    multiple style="width: 300px">
+                </select>
+            </div>
+        </div>
+        <div data-position="fixed" data-role="footer" style="text-align: center; vertical-align: middle;
+            font-family: Segoe UI, Verdana, Tahoma, Arial, sans-serif; font-size: 22px;">
+            1 POPUNI ZAHTEV
+        </div>
+    </div>
+    <!-- Step 2 -->
+    <div id="step2" data-role="page">
+        <div class="ui-grid-b" data-position="fixed" data-role="header" data-theme="b" style="background-color: #FFFFFF;
+            background-image: none; height: 42px">
+            <div class="ui-block-a" style="background-color: #FFFFFF; text-align: left; height: 42px">
+                <a data-icon="info" data-iconpos="notext" data-rel="dialog" data-role="button" href="#info2"
+                    style="color: #FFFFFF; float: left;"></a>
+            </div>
+            <div class="ui-block-b" style="background-color: #FFFFFF; color: #007DDD; font-family: Segoe UI, Verdana, Tahoma, Arial, sans-serif;
+                text-align: center; font-size: 24px; height: 42px; display: block;">
+                <canvas id="c2">TaksiProksi</canvas>
+            </div>
+            <div class="ui-block-c" style="background-color: #FFFFFF; text-align: right; height: 42px">
+                <a data-icon="gear" data-iconpos="notext" data-inline="true" data-role="button" href="#setup2">
+                </a>
+            </div>
+        </div>
+        <div data-role="content">
+            <div data-role="controlgroup" data-type="horizontal" style="text-align: center">
+                <a data-icon="arrow-l" data-iconpos="left" data-role="button" data-theme="b" href="#step1">
+                    Nazad</a> <a data-bind="click: step3" data-icon="arrow-r" data-iconpos="right" data-role="button"
+                        data-theme="b" href="#">Pozovi</a>
+            </div>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>Način prijave:</legend>
+                <input id="mobilni" checked="true" data-bind="checked: email" name="email" type="radio"
+                    value="1" />
+                <label for="mobilni">
+                    mobilni</label>
+                <input id="email" data-bind="checked: email" name="email" type="radio" value="0" />
+                <label for="email">
+                    email</label>
+            </fieldset>
+            <fieldset data-role="controlgroup" data-type="vertical">
+                <label data-bind="html: email() == 0 ? (username().length == 0 ? 'Email adresa:&lt;em&gt;&lt;super&gt;* obavezno&lt;/super&gt;&lt;/em&gt;' : 'Email adresa:' ): (username().length == 0 ? 'Mobilni telefon:&lt;em&gt;&lt;super&gt;* obavezno&lt;/super&gt;&lt;/em&gt;' : 'Mobilni telefon:')"
+                    for="username">
+                    Korisničko ime:</label>
+                <input id="username" data-bind="value: username, attr: {placeholder: email() == 0 ? 'npr. email@domain.tld' : 'npr. 06X1234567 (bez razmaka, prefiksa i crtica)' }"
+                    type="email" value="" />
+            </fieldset>
+            <fieldset data-role="controlgroup" data-type="vertical">
+                <label for="password">
+                    Lozinka:<em data-bind="visible: password().length == 0"><super>* 
+		obavezno</super></em></label>
+                <input id="password" data-bind="value: password" placeholder="minimum 5 karaktera"
+                    type="password" value="" />
+            </fieldset>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <div data-bind="visible: email() == 0" style="float: right; text-align: justify;
+                    font-style: italic; display: none">
+                    Ukoliko nemate lozinku registrujte se putem <a href="http://bg.taksiproksi.com/email.aspx"
+                        target="_blank">www.taksiproksi.com</a></div>
+                <div data-bind="visible: email() == 1" style="float: right; text-align: justify;
+                    font-style: italic">
+                    Ukoliko nemate lozinku pošaljite SMS sa sadržajem &quot;REG&quot; ili &quot;REG
+                    vaša_lozinka&quot; na <a href="smsto:+381695555021" target="_blank">+381(69)5555-021</a></div>
+            </fieldset>
+            <!--<fieldset>
+            <div>
+                <label for="checkbox">Zapamti podatke pristupa</label>
+                <input data-inline="true" data-bind="checked: checkbox" type="checkbox" id="checkbox" />
+            </div>
+            </fieldset>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    Podaci Vašeg poziva</h3>
+                <table>
+                    <tr>
+                        <td class="label">
+                            <b>Adresa polazišta:</b>
+                        </td>
+                        <td data-bind="text: start">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">
+                            <b>Adresa odredišta:</b>
+                        </td>
+                        <td data-bind="text: finish">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">
+                            <b>Specijalni zahtevi:</b>
+                        </td>
+                        <td data-bind="text: specreq">
+                        </td>
+                    </tr>
+                </table>
+            </div>-->
+        </div>
+        <div data-position="fixed" data-role="footer" style="text-align: center; vertical-align: middle;
+            font-family: Segoe UI, Verdana, Tahoma, Arial, sans-serif; font-size: 22px;">
+            2 PRIJAVI SE
+        </div>
+    </div>
+    <!-- Step 3 -->
+    <div id="step3" data-role="page">
+        <div class="ui-grid-b" data-position="fixed" data-role="header" data-theme="b" style="background-color: #FFFFFF;
+            background-image: none; height: 42px">
+            <div class="ui-block-a" style="background-color: #FFFFFF; text-align: left; height: 42px">
+            </div>
+            <div class="ui-block-b" style="background-color: #FFFFFF; color: #007DDD; font-family: Segoe UI, Verdana, Tahoma, Arial, sans-serif;
+                text-align: center; font-size: 24px; height: 42px; display: block;">
+                <canvas id="c3">TaksiProksi</canvas>
+            </div>
+            <div class="ui-block-c" style="background-color: #FFFFFF; text-align: right; height: 42px">
+            </div>
+        </div>
+        <div data-role="content">
+            <input id="order" data-bind="value: order" style="display: none" />
+            <input id="orderType" data-bind="value: order" style="display: none" />
+            <input id="username" data-bind="value: username" style="display: none" />
+            <input id="password" data-bind="value: password" style="display: none" />
+            <div id="status" style="text-align: center">
+                <canvas width="27" height="27" id="loader"></canvas>
+            </div>
+            <div data-collapsed="false" data-role="collapsible">
+                <h3>
+                    Podaci Vašeg poziva</h3>
+                <table>
+                    <tr>
+                        <td class="label">
+                            <b>Adresa polazišta:</b>
+                        </td>
+                        <td data-bind="text: start">
+                        </td>
+                    </tr>
+                    <!--<tr>
+                        <td class="label">
+                            <b>Adresa odredišta:</b>
+                        </td>
+                        <td data-bind="text: finish">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">
+                            <b>Specijalni zahtevi:</b>
+                        </td>
+                        <td data-bind="text: specreq">
+                        </td>
+                    </tr>-->
+                </table>
+            </div>
+        </div>
+        <div data-position="fixed" data-role="footer" style="text-align: center; vertical-align: middle;
+            font-family: Segoe UI, Verdana, Tahoma, Arial, sans-serif; font-size: 22px;">
+            3 SAČEKAJ ODGOVOR
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about" data-role="page">
+        <div data-role="header" style="text-align: center; font-size: 22px; height: 42px">
+            Info
+        </div>
+        <div data-role="content">
+            <div style="width: 100%; text-align: center;">
+                <table style="position: relative; margin-bottom: 15px; background-color: #007DDD;
+                    font-family: Segoe UI, Arial, sans-serif; font-size: 22px; text-align: center;
+                    border: thin #007FFF solid;">
+                    <tr>
+                        <td style="background-color: #007DDD; color: #FFFFFF; text-align: right; width: 120px;">
+                            <b>&nbsp;T a k s i </b>&nbsp;
+                        </td>
+                        <td style="background-color: #FFFFFF; color: #007FFF; text-align: left; width: 120px;">
+                            <b>&nbsp;P r o k s i </b>&nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="text-align: justify">
+                <b>Dobrodošli u TaksiProksi</b><br />
+                <br />
+                Upotrebom TaksiProksi u mogućnosti ste da pozovete taksi vozilo na najbrži i najjeftiniji
+                mogući način na teritoriji Vašeg grada, ukoliko imate pristup internetu putem Vašeg
+                mobilnog HTML5 browser-a.<br />
+                <br />
+                Za upotrebu TaksiProksi servisa neophodno je da se prethodno registrujete pri servisu
+                SMS porukom sa sadržajem &quot;REG&quot; ili &quot;REG vaša_lozinka&quot; (<i>bez navodnika</i>)
+                poslatom na broj <a href="smsto:381695555021">+381(0)69-5555-021</a> ili putem sajta
+                <a href="http://bg.taksiproksi.com/email.aspx">www.taksiproksi.com</a>.<br />
+                <br />
+                <b>Naznaka:</b> <i>Veća brzina uređaja i internet pristupa omogućava i brži odziv.</i>
+            </div>
+            <br />
+            <div>
+                Kontaktirajte nas ukoliko imate problema putem <a href="mailto:info@taksiproksi.com">
+                    emaila</a> ili putem sajta <a href="http://www.taksiproksi.com">www.taksiproksi.com</a>.
+            </div>
+            <a data-bind="click: checkVersion" data-role="button" href="#">Proveri verziju</a>
+        </div>
+    </div>
+    <!-- info2 -->
+    <div id="info2" data-role="page">
+        <div data-role="header" style="text-align: center; font-size: 22px; height: 42px">
+            Pomoć
+        </div>
+        <div data-role="content">
+            <div style="text-align: justify">
+                <b>Registracija korisnika</b><br />
+                <br />
+                Korisnici TaksiProksi servisa moraju se prethodno registrovati.<br />
+                <br />
+                Kao što je naznačeno registracija pri TaksiProksi servisu moguća je SMS porukom
+                sa sadržajem &quot;REG&quot; ili &quot;REG vaša_lozinka&quot; (<i>bez navodnika</i>,
+                proizvoljno zadajući <i>vašu_lozinku</i>) poslatom na broj <a href="smsto:381695555021">
+                    +381(0)69-5555-021</a> ili putem sajta <a href="http://bg.taksiproksi.com/email.aspx">
+                        www.taksiproksi.com</a>.<br />
+                <br />
+                <b>Napomena:</b> <i>Mobilni telefon registrovanog korisnika unosi se bez prefiksa ispred
+                    pozivnog broja za mobilnu mrežu registrovanog korisnika (06X gde X određuje mobilnu
+                    mrežu korisnika), praćeno samim brojem mobilnog telefona, sve spojeno i bez razmaka/crtica.</i>
+            </div>
+            <br />
+            <div>
+                Kontaktirajte nas ukoliko imate problema putem <a href="mailto:info@taksiproksi.com">
+                    emaila</a> ili putem sajta <a href="http://www.taksiproksi.com">www.taksiproksi.com</a>.
+            </div>
+        </div>
+    </div>
+    <!-- info3 -->
+    <div id="info3" data-role="page">
+        <div data-role="header" style="text-align: center; font-size: 22px; height: 42px">
+            Pomoć
+        </div>
+        <div data-role="content">
+            <div style="text-align: justify">
+                <b>Kućna / Omiljena adresa</b><br />
+                <br />
+                TaksiProksi aplikacija omogućuje korisniku da u svom browser-u sačuva svoju kućnu
+                i omiljenu adresu, te kasnije učita iste u adrese polazišta/odredišta bez ponavljana
+                unosa.<br />
+                <br />
+                Ukoliko to želi, korisnik takođe može omogućiti pokušaj pronalaska svoje trenutne
+                lokacije putem trenutno dostupnih lokacijskih podataka, najpreciznije putem GPS.<br />
+                <br />
+                <b>Napomena:</b> <i>Za određivanje lokacije na osnovu pozicije koristi se Microsoft
+                    Bing servis, koji ne može uvek odrediti Vašu punu adresu, te je stoga korisnik može
+                    uvek naknadno ručno dopraviti.</i>
+            </div>
+            <br />
+            <div>
+                Kontaktirajte nas ukoliko imate problema putem <a href="mailto:info@taksiproksi.com">
+                    emaila</a> ili putem sajta <a href="http://www.taksiproksi.com">www.taksiproksi.com</a>.
+            </div>
+        </div>
+    </div>
+    <!-- intro -->
+    <div id="intro" data-role="page">
+        <div data-role="header" style="text-align: center; font-size: 22px; height: 42px">
+            Intro
+        </div>
+        <div data-role="content">
+            <div style="text-align: justify">
+                <b>Prikaz važnih dugmića:</b>
+                <br />
+                <a data-enabled="false" data-icon="info" data-iconpos="notext" data-role="button"
+                    href="#about" style="color: #FFFFFF; float: left;"></a><b>Info/Pomoć dijalog</b>
+                - <i>ovo dugme gde god bilo dostupno otvara dijalog sa dodatnim informacijama i pomoći
+                    za upotrebu</i>
+                <br />
+                <a data-enabled="false" data-icon="gear" data-iconpos="notext" data-role="button"
+                    href="#setup" style="color: #FFFFFF; float: left;"></a><b>Podešavanja</b> -
+                <i>ovo dugme pristupa podešavanjima aplikacije koje potom možete menjati sami i konačno
+                    snimiti</i>
+                <br />
+                <a data-enabled="false" data-icon="home" data-inline="true" data-role="button" href="#">
+                    kućna</a> / <a data-enabled="false" data-icon="star" data-inline="true" data-role="button"
+                        href="#">omiljena</a> <b>Kućna / Omiljena adresa</b> - <i>ovi dugmići automatski učitavaju
+                            prethodno snimljena podešavanja aplikacije u tekstualno polje neposredno iznad dugmeta</i>
+            </div>
+        </div>
+    </div>
+    <!-- setup -->
+    <div id="setup" data-role="page">
+        <div class="ui-grid-b" data-position="fixed" data-role="header" data-theme="b" style="background-color: #FFFFFF;
+            background-image: none; height: 42px">
+            <div class="ui-block-a" style="background-color: #FFFFFF; text-align: left; height: 42px">
+                <a data-icon="info" data-iconpos="notext" data-rel="dialog" data-role="button" href="#info3"
+                    style="color: #FFFFFF; float: left;"></a>
+            </div>
+            <div class="ui-block-b" style="background-color: #FFFFFF; color: #007DDD; font-family: Segoe UI, Verdana, Tahoma, Arial, sans-serif;
+                text-align: center; font-size: 24px; height: 42px; display: block;">
+                <canvas id="s1">TaksiProksi</canvas>
+            </div>
+            <div class="ui-block-c" style="background-color: #FFFFFF; text-align: right; height: 42px">
+            </div>
+        </div>
+        <div data-role="content">
+            <div data-role="controlgroup" data-type="horizontal" style="text-align: center">
+                <a data-bind="click: saveSetup" data-icon="check" data-role="button" data-theme="b"
+                    href="#">Snimi</a> <a data-icon="delete" data-role="button" data-theme="b" href="javascript: history.back(-1)">
+                        Otkaži</a>
+            </div>
+            <div>
+                <label for="address1">
+                    <div data-bind="click: locBing.bind($data, 'address1'), visible: navigator.geolocation != null"
+                        data-icon="home" data-iconpos="notext" data-role="button" href="#" style="float: left;
+                        margin-top: 0px;">
+                    </div>
+                    kućna adresa:</label>
+                <div>
+                    <textarea id="address1" data-bind="value: address1" placeholder="Adresa se snima samo u Vašem browser-u!"
+                        type="text"></textarea>
+                    <a data-bind="click: locBing.bind($data, 'address1'), visible: navigator.geolocation != null"
+                        data-icon="arrow-u" data-role="button" href="#" style="float: right">pronađi trenutnu
+                        lokaciju</a>
+                </div>
+            </div>
+            <br />
+            <div>
+                <label for="address2">
+                    <div data-icon="star" data-iconpos="notext" data-role="button" href="#" style="float: left;
+                        margin-top: 0px;">
+                    </div>
+                    <div style="vertical-align: bottom">
+                        omiljena adresa:</div>
+                </label>
+                <div>
+                    <textarea id="address2" data-bind="value: address2" data-inline="true" placeholder="Adresa se snima samo u Vašem browser-u!"
+                        type="text"></textarea>
+                    <a data-bind="click: locBing.bind($data, 'address2'), visible: navigator.geolocation != null"
+                        data-icon="arrow-u" data-role="button" href="#" style="float: right">pronađi trenutnu
+                        lokaciju</a>
+                </div>
+            </div>
+            <div style="text-align: right">
+                <a href="http://go.microsoft.com/?linkid=9710837">Bing Maps TOU</a></div>
+        </div>
+        <div data-position="fixed" data-role="footer" style="text-align: center; vertical-align: middle;
+            font-family: Segoe UI, Verdana, Tahoma, Arial, sans-serif; font-size: 22px;">
+            Podešavanja
+        </div>
+    </div>
+    <!-- setup2 -->
+    <div id="setup2" data-role="page">
+        <div class="ui-grid-b" data-position="fixed" data-role="header" data-theme="b" style="background-color: #FFFFFF;
+            background-image: none; height: 42px">
+            <div class="ui-block-a" style="background-color: #FFFFFF; text-align: left; height: 42px">
+                <a data-icon="info" data-iconpos="notext" data-rel="dialog" data-role="button" href="#info3"
+                    style="color: #FFFFFF; float: left;"></a>
+            </div>
+            <div class="ui-block-b" style="background-color: #FFFFFF; color: #007DDD; font-family: Segoe UI, Verdana, Tahoma, Arial, sans-serif;
+                text-align: center; font-size: 24px; height: 42px; display: block;">
+                <canvas id="s2">TaksiProksi</canvas>
+            </div>
+            <div class="ui-block-c" style="background-color: #FFFFFF; text-align: right; height: 42px">
+            </div>
+        </div>
+        <div data-role="content">
+            <div data-role="controlgroup" data-type="horizontal" style="text-align: center">
+                <a data-bind="click: saveSetup2" data-icon="check" data-role="button" data-theme="b"
+                    href="#">Snimi</a> <a data-icon="delete" data-role="button" data-theme="b" href="javascript: history.back(-1)">
+                        Otkaži</a>
+            </div>
+            <br />
+            <div>
+                <fieldset>
+                    <label for="checkbox">
+                        Pamti podatke pristupa i poziva</label>
+                    <input id="checkbox" data-bind="checked: checkbox" data-inline="true" type="checkbox" />
+                </fieldset>
+            </div>
+        </div>
+        <div data-position="fixed" data-role="footer" style="text-align: center; vertical-align: middle;
+            font-family: Segoe UI, Verdana, Tahoma, Arial, sans-serif; font-size: 22px;">
+            Podešavanja
+        </div>
+    </div>
+</body>
+</html>
