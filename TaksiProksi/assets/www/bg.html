@@ -282,15 +282,18 @@
         var version = "1.1.0";
         var hostName = "bg.taksiproksi.com";
         var osOffset = 6; // 5 for Android, 11 for Windows Phone
-
+		var isCordova = false;
         var intervalID;
+        
+        var deviceReadyDeferred = $.Deferred();
 
         document.addEventListener("deviceready", onDeviceReady, false);
 
         function onDeviceReady() {
-            CV(false);
-            checkConnection();
-
+        	isCordova = true;
+			checkConnection();
+			CV(false);
+			deviceReadyDeferred.resolve();
         }
 
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
@@ -312,7 +315,7 @@
         function checkConnection() {
             var networkState = navigator.network.connection.type;
             if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) {
-                navigator.notification.confirm('Ukoliko internet pristup nije uključen izaberite povratak na izbor grada i podesite internet pristup. U suprotnom odaberite nastavak dalje.', alertConnection, 'Aplikacija ne prepoznaje pristup internetu.', 'Povratak|Nastavak');
+                navigator.notification.confirm('Ukoliko internet pristup nije uključen izaberite povratak na izbor grada i podesite internet pristup. U suprotnom odaberite nastavak dalje.', alertConnection, 'Nepoznat pristup internetu', 'Povratak, Nastavak');
             }
         }
 
@@ -655,12 +658,15 @@
 
         $(document).ready(function () {
 
-            if (typeof Cordova == 'undefined' || window.device == undefined) {
-                navigator.notification = {};
-                navigator.notification.alert = function (msg) {
-                    alert(msg);
-                };
-            }
+        	$.when(deviceReadyDeferred).then(function () {
+        		alert(isCordova);
+        		if (!isCordova) {
+                    navigator.notification = {};
+                    navigator.notification.alert = function (msg) {
+                        alert(msg);
+                    };
+                }
+        	});
 
             //document.addEventListener("pause", saveSetup, false);
 

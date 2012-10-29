@@ -14,7 +14,8 @@
     <script src="knockout-2.1.0.js" type="text/javascript"></script>
     <script src="cordova-2.1.0.js" type="text/javascript"></script>
     <script src="security.js" type="text/javascript"></script>
-    <!--<script src="http://jsconsole.com/remote.js?BA09DDCF-DF6A-4D09-B34A-14220ECE4890"></script>-->
+    <!--<script src="http://jsconsole.com/remote.js?BA09DDCF-DF6A-4D09-B34A-14220ECE4890"></script>
+-->
     <script type="text/javascript">
         var logo = function (ctx) {
             ctx.save();
@@ -282,15 +283,18 @@
         var version = "1.1.0";
         var hostName = "ns.taksiproksi.com";
         var osOffset = 6; // 5 for Android, 11 for Windows Phone
-
+		var isCordova = false;
         var intervalID;
+        
+        var deviceReadyDeferred = $.Deferred();
 
         document.addEventListener("deviceready", onDeviceReady, false);
 
         function onDeviceReady() {
-            CV(false);
-            checkConnection();
-
+        	isCordova = true;
+			checkConnection();
+			CV(false);
+			deviceReadyDeferred.resolve();
         }
 
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
@@ -312,7 +316,7 @@
         function checkConnection() {
             var networkState = navigator.network.connection.type;
             if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) {
-                navigator.notification.confirm('Ukoliko internet pristup nije uključen izaberite povratak na izbor grada i podesite internet pristup. U suprotnom odaberite nastavak dalje.', alertConnection, 'Aplikacija ne prepoznaje pristup internetu.', 'Povratak|Nastavak');
+                navigator.notification.confirm('Ukoliko internet pristup nije uključen izaberite povratak na izbor grada i podesite internet pristup. U suprotnom odaberite nastavak dalje.', alertConnection, 'Nepoznat pristup internetu', 'Povratak, Nastavak');
             }
         }
 
@@ -655,12 +659,15 @@
 
         $(document).ready(function () {
 
-            if (typeof Cordova == 'undefined' || window.device == undefined) {
-                navigator.notification = {};
-                navigator.notification.alert = function (msg) {
-                    alert(msg);
-                };
-            }
+        	$.when(deviceReadyDeferred).then(function () {
+        		alert(isCordova);
+        		if (!isCordova) {
+                    navigator.notification = {};
+                    navigator.notification.alert = function (msg) {
+                        alert(msg);
+                    };
+                }
+        	});
 
             //document.addEventListener("pause", saveSetup, false);
 
@@ -721,8 +728,6 @@
                 self.checkbox = ko.observable(true);
 
                 self.loadApp = function () {
-
-                    //navigator.notification.alert('now loading app');
 
                     if (window.localStorage != null) {
 
@@ -1239,6 +1244,7 @@
 
             window.vm = new TPViewModel();
             ko.applyBindings(vm);
+            window.vm.loadApp();
 
         });
 
@@ -1425,7 +1431,7 @@
             <fieldset data-role="controlgroup" data-type="horizontal">
                 <div data-bind="visible: email() == 0" style="float: right; text-align: justify;
                     font-style: italic; display: none">
-                    Ukoliko nemate lozinku registrujte se putem <a href="http://ns.taksiproksi.com/email.aspx"
+                    Ukoliko nemate lozinku registrujte se putem <a href="http://bg.taksiproksi.com/email.aspx"
                         target="_blank">www.taksiproksi.com</a></div>
                 <div data-bind="visible: email() == 1" style="float: right; text-align: justify;
                     font-style: italic">
@@ -1555,7 +1561,7 @@
                 Za upotrebu TaksiProksi servisa neophodno je da se prethodno registrujete pri servisu
                 SMS porukom sa sadržajem &quot;REG&quot; ili &quot;REG vaša_lozinka&quot; (<i>bez navodnika</i>)
                 poslatom na broj <a href="smsto:381695555021">+381(0)69-5555-021</a> ili putem sajta
-                <a href="http://ns.taksiproksi.com/email.aspx">www.taksiproksi.com</a>.<br />
+                <a href="http://bg.taksiproksi.com/email.aspx">www.taksiproksi.com</a>.<br />
                 <br />
                 <b>Naznaka:</b> <i>Veća brzina uređaja i internet pristupa omogućava i brži odziv.</i>
             </div>
@@ -1581,7 +1587,7 @@
                 Kao što je naznačeno registracija pri TaksiProksi servisu moguća je SMS porukom
                 sa sadržajem &quot;REG&quot; ili &quot;REG vaša_lozinka&quot; (<i>bez navodnika</i>,
                 proizvoljno zadajući <i>vašu_lozinku</i>) poslatom na broj <a href="smsto:381695555021">
-                    +381(0)69-5555-021</a> ili putem sajta <a href="http://ns.taksiproksi.com/email.aspx">
+                    +381(0)69-5555-021</a> ili putem sajta <a href="http://bg.taksiproksi.com/email.aspx">
                         www.taksiproksi.com</a>.<br />
                 <br />
                 <b>Napomena:</b> <i>Mobilni telefon registrovanog korisnika unosi se bez prefiksa ispred
